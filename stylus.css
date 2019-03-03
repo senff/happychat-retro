@@ -1,0 +1,1663 @@
+@font-face {
+ font-family:'8bit';
+ src:url('/assets/fonts/8bit.eot');
+ src:url('/assets/fonts/8bit.eot?#iefix') format("embedded-opentype"),
+ url('/assets/fonts/8bit.woff') format("woff"),
+ url('/assets/fonts/8bit.ttf') format("truetype"),
+ url('/assets/fonts/8bit.svg#8bit') format("svg");
+ font-weight:400;
+ font-style:normal;
+}
+
+
+
+/* --- THAT GREAT FONT ---------------------------------------------------------------- --- */
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+
+/* --- GENERAL BOX AND BUTTON STUFF ---------------------------------------------------------------- --- */
+
+    .chat__chat-queue > div,
+    .chat__current-chat__header,
+    .chat__current-chat-meta.chat__chat-panel,
+    .login {
+        background: #FFA135;
+        box-shadow: 5px 0 #000000, 0 5px #000000, -5px 0 #DB6415, 0 -5px #DB6415;
+    }
+
+
+    .autotranslate-button,
+    .chat-request-chat-button,
+    .tag-suggestions__item,
+    .expand-button,
+    .user-data-panel__admin-buttons > a,
+    .login a,
+    .login a{
+        background:#DB6415;
+        border-radius: 0;
+        border: 0;
+        color: #ffffff;
+        text-shadow: 2px 2px 0 #000000;
+        font-family: '8bit';
+        font-size: 10px;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+        padding: 8px 4px;
+        text-transform: uppercase;
+    }
+
+    .autotranslate-button:hover {
+        margin: 2px 0 0 2px;
+    }
+
+    .chat-request-chat-button.chat-request-chat-button__pressed,
+    .autotranslate-button.active {
+        background: #4ab866;
+        color: #000000;
+        text-shadow: none;
+    }
+
+
+/* --- LOGIN SCREEN ---------------------------------------------------------------- --- */
+    #app .container .chat {
+        background-image: url('http://www.senff.com/happychat/retro/chat-background.jpg');
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+    .login {
+        width: 400px;
+    }
+
+    .login h3 {
+        color: #000000;
+        font-size: 0;
+        text-shadow: 2px 2px 0 #ffffff;
+    }
+
+    .login h3::before {
+        content: "Happychat";
+        font-size: 22px;
+        display: block;
+    }
+
+    .login h3::after {
+        content: "(Retro Edition)";
+        font-size: 18px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .login .button {
+        padding: 10px;
+        color: #ffffff !important;
+        font-size: 0;
+    }
+
+    .login .button::before {
+        content:"Insert Coin";
+        font-size: 14px;
+    }
+
+    .login .button:hover,
+    .login .button:focus {
+        color: #ffffff;
+        border: 0;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+    }
+
+    .modal__welcome {
+        font-family: '8bit';
+        background:#DE421C;
+        text-transform: uppercase;
+    }
+
+    .modal__welcome h3 {
+        font-size: 0;
+    }
+
+    .modal__welcome p {
+        display: none;
+    }
+
+    .modal__welcome h3::before {
+        font-size: 20px;
+        content: "Ready Player One";
+        text-shadow: 3px 3px 0 #000000;
+        margin: 20px 0;
+        display: block;
+        color: #FEC7C1;
+    }
+
+    .modal__welcome .chat__dropdown__display,
+    .modal__welcome .chat__dropdown ul li {
+        font-size: 11px; 
+        text-transform: uppercase;
+    }
+
+    .modal__welcome .modal__welcome__status-chooser {
+        width: 100%;
+    }
+
+    .modal__welcome .chat__dropdown {
+        max-width: 230px;
+        border: solid 3px #000000;
+        background: #ffffff;
+    }
+
+    .modal__welcome .chat__dropdown .chat__dropdown__display {
+        padding: 5px 10px 0 10px;
+        margin: 0;
+    }
+
+    .modal__welcome .chat__dropdown .chat__dropdown__display svg {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 5px;
+    }
+
+    .modal__welcome .chat__dropdown .chat__dropdown__display
+    .modal__welcome .chat__dropdown__status,
+    .modal__welcome .chat__dropdown .chat__dropdown__display:hover {
+        color: #000000 !important;
+    }
+
+
+    .modal__welcome .chat__dropdown ul{
+        max-width: 300px !important;
+        width: 200px;
+    }
+
+    .modal__dialog .modal__welcome button {
+        font-size: 0;
+        background: #14acdd;
+        color: #ffffff;
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;
+        margin-top: 5px;
+    }
+
+    .modal__welcome  button::before {
+        content: "GO";
+        font-size: 14px;
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+/* --- MAIN ---------------------------------------------------------------- --- */
+
+    .chat__chat-panels {
+        background: transparent;
+    }
+
+    .chat__chat-panel {
+        border-right: 0;
+    }
+
+/* --- LEFT PANEL ---------------------------------------------------------------- --- */
+
+    .chat__chat-queue {
+        margin: 10px 15px 10px 0;
+        flex: 0 1 350px;
+        height: calc(100% - 20px);
+        border-right: 0;
+        padding: 5px 5px 5px 10px;
+        margin-left: 5px;
+        overflow: hidden;
+        font-family: '8bit';
+    }
+
+    .chat__chat-queue > div {
+        padding: 10px !important;
+    }
+
+/* --- LEFT PANEL: CHAT LIST ---------------------------------------------------------------- --- */
+
+    .chat__chat-queue .chat-list {
+        margin-bottom: 25px;
+    }
+
+    .capacity__stats h4,
+    .chat-list__title-bar-title {
+        color:#ffffff;
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+    .chat-list__items p {
+        color: #000000;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .chat-list__items {
+        font-size: 9px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .chat__chat-queue .chat-list__item {
+        display: block;
+        padding: 5px 5px 3px 28px;
+    }
+
+    .chat__chat-queue .chat-list__item img {
+        /* display: none; */
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        border-radius: 0;
+        box-shadow: 2px 0 #000000, 0 2px #000000, -2px 0 #000000, 0 -2px #000000;
+    }
+
+    .chat__chat-queue .chat__label {
+        font-size: 5px;
+        position: relative;
+        top: -4px;
+        border-radius: 0;
+        background: #ff0000;
+        color: #ffffff;
+        padding:3px 2px 1px 2px;
+        box-shadow: 2px 0 #000000, 0 2px #000000, -2px 0 #000000, 0 -2px #000000;
+    }
+
+    .chat-list__item:hover svg {
+        fill: #000000;
+    }
+
+    .chat-list__item.is-selected svg {
+        fill: #ffffff;
+    }
+
+
+    .chat__chat-queue .chat-list__item:last-child {
+        margin-bottom: 20px;
+    }
+
+    .chat__chat-queue .chat-list > div:last-child .chat-list__item:last-child {
+        margin-bottom: 10px;
+    }
+
+    .chat-list__item .chat-list__item-hide {
+        top: 0;
+    }
+
+    .chat-list__item.is-selected, .chat-list__item.is-selected:hover {
+        background: #DB6415;
+        color: #ffffff;
+    }
+
+    .chat-list__item-unread-count {
+        font-size: 9px;
+        border-radius: 0;
+        padding: 2px 3px 0 3px;
+        right: 5px;
+        top: 4px;
+    }    
+
+/* --- LEFT PANEL: PLAYERS ---------------------------------------------------------------- --- */
+
+    .chat__chat-queue .capacity__operators {
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        height: auto;
+        border: 0;
+        overflow: visible;
+        width: 100%;
+        height: auto !important;
+    }
+    
+    .capacity .capacity__stats {
+        padding: 0 0 10px 0;
+        margin-bottom: 12px;
+    }
+
+    .capacity__stats h4 {
+        font-size: 0;
+        padding-bottom: 5px;
+    }
+
+    .capacity__stats h4:before {
+        content: "PLAYERS";
+        font-size: 14px;
+    }
+
+    .capacity__stats-item {
+        padding: 0; 
+        font-size: 9px;
+        margin-top: 5px;
+        text-transform: uppercase;
+    }
+
+    .capacity__stats-bubble {
+        border-radius: 0;
+        font-size: 9px;
+        margin-top: -2px;
+        padding: 2px 5px 0 5px;
+        font-weight: 100;
+        border: 0;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+    }
+
+    .capacity .capacity__operators .operators {
+        margin: 0 16px 0 0;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        background: #ffffff;
+        display: inline-block;
+        clear: none;
+        overflow: visible;
+    }
+
+    .capacity__operators .operators:nth-of-type(9n) {
+        margin-right: 0;
+    } 
+
+    .capacity__operators .operators::before {
+        display: none;
+    }
+
+    .chat__chat-queue .capacity__operators .operators img {
+        border-radius:0;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        margin-bottom: 10px;
+    }
+
+    .capacity__operators .operators__available img {
+        box-shadow: 3px 0 #00AB00, 0 3px #00AB00, -3px 0 #00AB00, 0 -3px #00AB00;
+    }
+
+    .capacity__operators .operators__reserve img {
+        box-shadow: 3px 0 #0000ff, 0 3px #0000ff, -3px 0 #0000ff, 0 -3px #0000ff;
+    }
+
+    .capacity__operators .operators__busy img {
+        box-shadow: 3px 0 #ffff00, 0 3px #ffff00, -3px 0 #ffff00, 0 -3px #ffff00;
+    }
+
+    .capacity__operators .operators__unavailable img {
+        box-shadow: 3px 0 #ff0000, 0 3px #ff0000, -3px 0 #ff0000, 0 -3px #ff0000;
+    }
+
+    .chat__chat-queue .operators__capacity {
+        width: 26px;
+        height: 5px;
+        margin: 7px 0 7px -3px;
+        border-radius: 0;
+        background: #F6D2B2;
+        display: block;
+    }
+
+    .operators__capacity-bar {
+        border-radius: 0;
+        background: #bb4400;
+    }
+
+/* --- LEFT PANEL: ACTION BAR ---------------------------------------------------------------- --- */
+
+    .chat__chat-queue .action-bar {
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+
+    .chat__dropdown .chat__dropdown__display,
+    .chat__chat-queue .action-bar a {
+        color:#000000;
+    }
+
+    .chat__chat-queue .chat__dropdown .chat__dropdown__display:hover,
+    .chat__chat-queue .chat__chat-queue .action-bar a:hover {
+      color: #bb4400;
+    }    
+
+    .chat__dropdown__status::before {
+        border-radius: 0;
+        position: relative;
+        top: -2px;
+    }
+
+    .chat__dropdown ul {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .chat__dropdown__active.chat__dropdown ul {
+        box-shadow: 5px 0 #000000, 0 5px #000000, -5px 0 #000000, 0 -5px #000000;  
+    }
+
+
+/* --- MAIN PANEL ---------------------------------------------------------------- --- */
+
+    .chat__chat-panels .chat__chat-panel {
+        padding-left: 30px;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+
+    .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div {
+        width: calc(100% - 380px) !important;
+         
+    }
+
+    .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div .session{
+        padding-bottom: 40px;
+    }
+
+    .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div:last-child .session{
+        padding-bottom: 20px;
+    }
+
+    .chat__current-chat__actions{
+        width: calc(100% - 400px) !important;
+        height: 150px;
+        padding: 0 10px;
+        background: transparent;
+        border-top: 0;
+    }
+
+    .chat-actions__current-chat-action-compose {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;  
+        padding: 3px 4px;
+        height: 135px !important;
+        background: #ffffff;
+    }
+
+    .chat__current-chat__actions > div textarea { 
+        outline: none;
+        border: solid 4px #000000;
+        border-radius: 0;
+        box-shadow: none !important;
+        height: 127px;
+        font-family: '8bit';
+        font-size: 12px;
+        background:#e0e0e0;
+        background-size: 200% 200%;
+        background-position: center center;  
+    }
+
+    .chat-actions__current-chat-action-compose button {
+        border-radius: 0;
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000; 
+        right: 16px;
+        top: 10px;
+        display: block;
+        padding: 5px 2px 2px 5px;
+        text-align: center;
+        width: 34px;
+        border: solid 3px #33ccff;
+        border-right: solid 3px #0088aa;
+        border-bottom: solid 3px #0088aa;
+    }
+
+    .chat-actions__current-chat-action-compose button svg {
+        display: none;
+    }
+
+    .chat-actions__current-chat-action-compose button::before {
+        content: ">";
+        color: #ffffff;
+        font-size: 20px;
+        font-family: '8bit';
+    }
+
+/* --- MAIN PANEL: HEADER ---------------------------------------------------------------- --- */
+
+    .chat__current-chat__header {
+        margin: 5px 15px 0 0;
+        width: calc(100% - 435px);
+    }
+
+    .chat-toolbar {
+        background: transparent;
+        font-family: '8bit';
+        text-transform: uppercase;
+        border-bottom: 0;
+    }
+
+    .chat__current-chat {
+        background: transparent;
+        border-bottom: 0;
+    }
+
+    .chat-toolbar .chat-toolbar__menu-item {
+        color: #000000;
+        padding: 6px 5px 5px 5px;
+        border-bottom: 0 !important;
+    }
+
+    .chat-toolbar .chat-toolbar__menu-item:hover {
+        background: #bb4400;
+        color: #ffffff;
+    }
+
+    .chat-toolbar .chat-toolbar__menu-item.is-selected {
+        border: none;
+        background: #000000;
+        color:#dd6600;
+    }
+
+    .chat__current-chat__header .chat-info {
+        background: #F6D2B2;
+        border-bottom: 0;
+        box-shadow: none;
+    }
+
+    .chat-info__badges > span {
+        border-radius: 0;
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 8px;
+        font-weight: 100;
+        padding-top: 1px;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+        margin: 0;
+    }
+
+    .chat-info__badges > span:last-child {
+        position: relative;
+    }
+
+    .chat__current-chat__header h4 {
+        color: #000000;
+        text-shadow: 2px 2px 0 #ffffff;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .chat__current-chat__header h4 .chat__label {
+        font-size: 8px;
+        padding: 3px;
+        text-shadow: none;
+        border-radius: 0;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+        position: relative;
+        top: -3px;
+        margin-right: 7px;
+    }
+
+    .chat__current-chat__header .chat-info__operators {
+        padding-right: 10px;
+        font-family: '8bit';
+        font-size: 9px;
+        text-transform: uppercase;
+    }
+
+    .chat__current-chat__header .capacity__operators {
+        margin-bottom: 30px;
+    }
+
+    .chat__current-chat__header .capacity__operators .operators {
+        margin: 0 0 0 10px;
+    }
+
+    .chat__current-chat__header .capacity__operators .operators img {
+        border-radius: 0;
+        width: 16px;
+        height: 16px;
+    }
+
+    .chat__current-chat__header .chat-info__details {
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 9px;
+        padding: 5px;
+    }
+
+    .chat__current-chat__header .chat-info__details > div:first-child > span {
+        display: none;
+    }
+
+    .chat__current-chat__header .chat-info__details > div:first-child a {
+        clear: both;
+        display: block;
+        padding: 3px 0 4px;
+        float: left;
+    }
+
+    .autotranslate-button {
+        right: 10px;
+        bottom: 10px;
+    }
+
+/* --- MAIN PANEL: THE ACTUAL CHAT ---------------------------------------------------------------- --- */
+
+    .chat__current-chat__messages .session__header h2 {
+        text-shadow: 2px 2px 0 #000000;
+        color: #ffffff;
+    }
+
+    .chat__current-chat__messages .session__header a {
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 9px;
+        color: #ffffff;
+    }
+
+    .session__header::after {
+        height: 3px;
+        background: #F6D2B2;
+    }
+
+    .chat__message {
+        padding: 3px;
+        position: relative;
+        overflow: visible;
+    }
+
+    @media screen and (min-width: 1400px) {
+        .chat__message {
+            max-width: 50%;
+        }
+    }
+
+    .chat__message.chat__message__from-user {
+        margin-left: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background:#bb4400;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+    }
+
+    .chat__message.chat__message__type-typing {
+        background: none;
+        box-shadow: none;    
+}
+
+    .chat__message.chat__message__type-typing .chat__message__text {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000 !important;
+        width: 100px;
+        position: relative;
+        top: -4px;
+    }
+
+    .chat__message.chat__message__from-user::before {
+        content:"";
+        position: absolute;
+        left: -46px;
+        width: 32px;
+        height: 32px;
+        top: -3px;
+        background-image: url('http://www.senff.com/happychat/retro/chat-user-icon.png');
+    }
+
+    .chat__message.chat__message__type-note, 
+    .chat__message.chat__message__from-operator {
+        margin-right: 55px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background:#14acdd;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+    }
+
+    .chat__message.chat__message__from-operator .chat__message__text {
+        background:#ffffff;
+        color: #000000;
+    }
+
+    .chat__message.chat__message__from-operator .chat__message__text a {
+        color: #14acdd;
+    }
+
+    .chat__message.chat__message__type-note::before,
+    .chat__message.chat__message__from-operator::before {
+        content:"";
+        position: absolute;
+        right: -44px;
+        width: 32px;
+        height: 32px;
+        top: auto;
+        bottom: 0;
+        background-image: url('http://www.senff.com/happychat/retro/chat-he-icon.png');
+    }
+
+    .chat__message.chat__message__type-event .chat__message__text,
+    .chat__message.chat__message__from-operator .chat__message__text,
+    .chat__message.chat__message__from-user .chat__message__text {
+        border-radius: 0;
+        margin:0;
+        border: solid 3px #000000;
+        overflow: hidden;
+    }
+
+    .chat__message__expand-source-text {
+        border-radius: 0;
+        border: solid 3px #000000;
+        border-bottom: 0;
+        margin: 0;
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 8px;
+        font-weight: normal;
+        padding: 3px 0 2px;
+        background:#d0d0d0;
+        color: #000000;
+    }
+
+    .chat__message.chat__message--with-translation .chat__message__text.chat__message__text--source {
+        border-radius: 0;
+        border-bottom: 0;
+        color: #555555;
+        background:#d0d0d0;
+        text-shadow: 1px 1px #ffffff;
+    }
+
+    .chat__message.chat__message--with-translation .chat__message__text.chat__message__text--source::before {
+        content: "ORIGINAL: ";
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .chat__message.chat__message__type-note {
+        box-shadow: 9px 9px 0 rgba(0,0,0,0.4);
+        background: transparent;
+        padding: 0;
+        position: relative;
+    } 
+
+    .chat__message.chat__message__type-note .chat__message__text {
+        background: #ffff99;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+        padding: 10px;
+        border: none;
+        font-family: 'courier new';  
+        color: #000000;
+        line-height: 16px;
+        font-size: 14px;
+    }   
+
+    .chat__message.chat__message__type-note .chat__message__text .chat__message__link {
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .chat__message.chat__message__type-note::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-width: 0 16px 16px 0;
+        border-style: solid;
+        border-color: transparent #cccc77;
+    }
+
+    .chat__message.chat__message__type-note .chat__message__text ul {
+        font-family: arial, helvetica;
+        font-size: 14px;
+        margin-top: 10px;
+        font-style: italic;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .chat__message.chat__message__type-ellipsis {
+        height: 20px;
+        line-height: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: '8bit';
+        font-size: 20px;
+        color: #ffffff;
+        text-shadow: 3px 3px 0 #000000;
+        letter-spacing: -5px;
+    } 
+
+    .chat__message.chat__message__type-ellipsis::before {
+        content:"(";
+    }
+
+    .chat__message.chat__message__type-ellipsis::after {
+        content:")";
+    }
+
+    .chat__message.chat__message__type-event .chat__message__text::after,
+    .chat__message.chat__message__from-operator .chat__message__text::after,
+    .chat__message.chat__message__from-user .chat__message__text::after {
+        display: none;
+    }
+
+
+    .chat__message.chat__message__type-event:not(.chat__message__type-note) .chat__message__text {
+        border: 0;
+        box-shadow: 3px 0 #ffffff, 0 3px #ffffff, -3px 0 #ffffff, 0 -3px #ffffff;
+        font-family: '8bit';
+        font-size: 8px;
+        text-transform: uppercase;
+    }
+
+
+    .chat__message.chat__message__type-event img.chat__gravatar {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        margin-left: -5px;
+        margin-right: -5px;
+        display: inline-block;
+    }
+
+    .chat__message.chat__message__type-customer-event a {
+        text-decoration: none;
+        color:#ffffff;
+    }
+
+    .chat__message__star {
+        width: 26px;
+        height: 26px;
+        background-image:url('http://www.senff.com/happychat/retro/chat-star.png');
+        background-size: 26px 26px;
+        right: 3px;
+        bottom: 3px;
+    }
+
+    .chat__message__star > span svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .tag-suggestions {
+        font-family: '8bit';
+        color: #ffffff;
+    }
+
+    .tag-suggestions__content {
+        border-top: solid 3px #F6D2B2;
+        border-bottom: solid 3px #F6D2B2;
+        padding-bottom: 10px;
+    }
+
+    .tag-suggestions__title {
+        text-shadow: 3px 3px 0 #000000;
+        text-transform: uppercase;
+    }
+
+
+    .session__stats {
+        color: #ffffff;
+        font-family: '8bit';
+        font-size: 10px;
+        text-shadow: 2px 2px 0 #000000;
+        text-transform: uppercase;
+        top: 10px;
+        position: relative;
+    }
+
+    .expand-button {
+        position: relative;
+        top:10px;
+        padding: 6px 15px;
+    }
+
+    .tag-suggestions__item {
+        position: relative;
+        top:5px;
+        padding: 3px 15px;
+        color: #44bb66;
+        background: #ffffff; 
+        text-shadow: none;
+}
+
+/* --- AUTOCOMPLETE ---------------------------------------------------------------- --- */
+
+    .auto-complete {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;
+        border-radius: 0;
+        border: 0;
+    }
+
+    .auto-complete .auto-complete__toolbar {
+        font-family: '8bit';
+        text-transform: uppercase;
+        background:#44bb66;
+        color: #ffffff;
+        border-radius: 0;
+        text-shadow: 2px 2px 0 #000000;
+        border-bottom: solid 4px #000000;
+        line-height: 26px;
+    }
+
+/* --- RIGHT PANEL ---------------------------------------------------------------- --- */
+
+    .chat__current-chat-meta.chat__chat-panel {
+        background: #499 !important;
+        margin: 15px;
+        padding: 15px 15px 0 15px;
+        position: absolute;
+        right: 15px;
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #75FBFD, 0 -4px #75FBFD !important;
+        max-height: calc(100vh - 30px);
+        overflow: auto;
+    }
+
+    .chat__current-chat-meta.chat__chat-panel > div {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;
+        padding: 15px;
+        color: #ffffff;
+        background-image: url('http://www.senff.com/happychat/retro/chat-bricks.png');
+        background-position: -2px -2px;
+    }
+
+/* --- RIGHT PANEL: USER INFO ---------------------------------------------------------------- --- */
+
+    .chat__current-chat-meta.chat__chat-panel .user-data-panel {
+        margin-bottom: 20px; 
+        padding-bottom: 10px;
+        padding-top: 3px;
+    } 
+
+    .chat__current-chat-meta.chat__chat-panel .user-data-panel::before {
+        content: "USER INFO";
+        font-size: 20px;
+        display: block;
+        margin-bottom: 20px;
+        color: #44ddff;
+        font-family: '8bit';
+        text-shadow: 3px 3px 0 #000000;
+        box-shadow: 0 3px 0 #44ddff, 0 6px 0 #000000;
+        padding-left: 40px;
+        background-image:url('http://www.senff.com/happychat/retro/chat-user-info.png');
+        background-repeat: no-repeat;
+        }
+
+    .chat__current-chat-meta.chat__chat-panel .user-data-panel .user-data-panel__gravatar,
+    .user-blog-panel__gravatar{
+        border-radius:0;
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+        box-shadow: 4px 0 #ffffff, 0 4px #ffffff, -4px 0 #ffffff, 0 -4px #ffffff;
+    }
+
+    .chat__current-chat-meta.chat__chat-panel .user-data-panel h4 {
+      text-shadow: 3px 3px 0 #000000;
+        margin: -5px 0 5px 0;
+        font-size: 12px;
+    } 
+
+    .chat__current-chat-meta.chat__chat-panel .easy-select {
+        background: #000000;
+        color: #00ff00;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 5px;
+        border: solid 3px #ffffff;
+        font-family: "8bit";
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+
+    .chat__current-chat-meta.chat__chat-panel .easy-select:focus {
+        background: #5CB4D6;
+        color: #ffffff;
+    }
+
+    .user-panel-items__item,
+    .user-panel-items__item-label,
+    .user-panel-items__item-content {
+        font-family: "8bit";
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 100;
+        height: 25px;
+        line-height: 25px;
+        color:#ffffff;
+          text-shadow: 2px 2px 0 #000000;
+    }
+
+    .user-panel-items__item-label,
+    .user-panel-items__item-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .user-panel-items__item-label {
+        width: 110px;
+        min-width: 1px;
+        color: #FFDD00;
+    }
+
+    .user-panel-items__item-label::after {
+        content: ":";
+        padding-right: 10px;
+    }
+
+    .user-panel-items__item-label[title="Current Upgrades"],
+    .user-panel-items__item-label[title="Lifetime Spend"]{
+        font-size: 0;
+    }
+
+    .user-panel-items__item-label[title="Current Upgrades"]::before {
+        content:"Upgrades:";
+        font-size: 9px;
+    }
+
+    .user-panel-items__item-label[title="Lifetime Spend"]::before {
+        content:"Spent:";
+        font-size: 9px;
+    }
+
+
+    .user-data-panel__admin-buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user-data-panel__notes > a,
+    .user-data-panel__admin-buttons > a,
+    .user-blog-panel__button {
+        background:#bb4400;
+        border-radius: 0;
+        border: 0 !important;
+        color: #ffffff !important;
+        text-shadow: 2px 2px 0 #000000;
+        font-family: '8bit';
+        font-size: 9px;
+        box-shadow: 3px 0 #ffffff, 0 3px #ffffff, -3px 0 #ffffff, 0 -3px #ffffff;
+        padding: 8px 4px;
+        text-transform: uppercase;
+        margin-right:0;
+    }
+
+    .user-data-panel__notes a:focus,
+    .user-data-panel__admin-buttons > a:focus,
+    .user-blog-panel__button:focus {
+        border: 0;
+    }
+
+    .user-data-panel__admin-buttons > a:hover,
+    .user-blog-panel__button:hover {
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+
+    .chat__current-chat-meta.chat__chat-panel .user-data-panel__admin-buttons > a,
+    .chat__current-chat-meta.chat__chat-panel .user-blog-panel__button {
+        font-size: 0;
+        box-shadow: 3px 0 #ffffff, 0 3px #ffffff, -3px 0 #ffffff, 0 -3px #ffffff;
+    }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(2),
+    .user-data-panel__admin-buttons > a:nth-of-type(3) {
+        padding-right: 0;
+    }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(1)::before {
+        content:"USER RC";
+        font-size: 9px;
+    }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(2)::before {
+        content:"S.A.";
+        color: #ffffff;
+        font-size: 9px;
+    }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(3)::before {
+        content:"N.A.";
+        font-size: 9px;
+    }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(4)::before {
+        content:"PAYMENTS";
+        font-size: 9px;
+    }
+
+    .user-data-panel iframe {
+        margin: 10px 0 10px -5px;
+    }
+
+/* --- USER INFO: NOTES --------------------------------------------------------------------------------- */
+
+    .user-data-panel__notes .user-data-panel__notes__add {
+        width: 65px;
+        padding: 3px 0;
+        text-align: center;
+        height: 20px;
+        background: #14acdd;
+        position: relative;
+        top: -5px;
+        font-size: 0;
+    }
+
+    .user-data-panel__notes .user-data-panel__notes__add:before {
+        content: "Add note";
+        font-size: 9px;
+    }
+
+    .user-data-panel__user-notes__item {
+        box-shadow: 4px 0 #ffffff, 0 4px #ffffff, -4px 0 #ffffff, 0 -4px #ffffff;
+        margin: 10px 0;
+        padding: 5px 5px 2px 5px;
+        line-height: 16px;
+    }
+
+.user-data-panel__user-notes__item.user-data-panel__user-notes__error {
+    padding: 5px;
+    font-family: '8bit'; 
+    font-weight: 100;
+    font-size: 9px;
+    text-transform: uppercase;
+    background: #cc0000;
+}
+
+.user-data-panel__user-notes__item.user-data-panel__user-notes__error a {
+    color: white;
+    text-decoration: underline;
+}
+
+    .user-data-panel__user-notes__item blockquote {
+        padding-top: 5px;
+    }
+
+    .user-data-panel__user-notes__item em {
+        display: block;
+        text-align: right;
+    }
+
+    .user-data-panel__user-notes__item:before {
+        display: none;
+    }
+
+    .user-data-panel .collapsable-section__label,
+    .user-blog-panel .collapsable-section__label {
+        font-size: 10px;
+        font-family: '8bit';
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+    .user-data-panel .collapsable-section__preview,
+    .user-blog-panel .collapsable-section__preview {
+        background: transparent;
+        display: inline;
+        font-size: 10px;
+        font-family: '8bit';    
+        text-shadow: 2px 2px 0 #000000;
+        font-weight: normal;
+    }
+
+    .user-data-panel .collapsable-section__preview:before,
+    .user-blog-panel .collapsable-section__preview:before {
+        content:"(";
+    }
+
+    .user-data-panel .collapsable-section__preview:after,
+    .user-blog-panel .collapsable-section__preview:after {
+        content:")";
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__preview:before {
+        content:'';
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__preview:after {
+        content:'';
+    }
+
+    .user-data-panel__support-history {
+        color: white;
+        padding: 5px;
+        font-size: 12px;
+        background: rgba(0,0,0,0.6);
+        max-height: 100px;
+        border: solid 1px #c0c0c0;   
+        margin-bottom: 2px;
+    }
+
+    .user-data-panel__support-history-item,
+    .user-data-panel__support-history-item a,
+    .user-data-panel__support-history-item span {
+        padding: 0;   
+        height: 15px;
+        line-height: 15px;
+    }
+
+    .user-data-panel__support-history-item a {
+        float: left;
+    }
+
+    .user-data-panel__support-history-item span {
+        float: right;
+    }
+
+/* --- RIGHT PANEL: SITE INFO ---------------------------------------------------------------- --- */
+
+    .user-blog-panel .collapsable-section__label {
+        font-size: 0;
+    }
+
+    .user-blog-panel .collapsable-section .collapsable-section__label::after {
+        content:"UPGRADES";
+        font-size: 10px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__label::after {
+        content: "TOS INFO";
+        font-size: 10px;
+    }
+
+
+    .chat__current-chat-meta.chat__chat-panel > div.user-blog-panel {
+        margin-bottom: 15px;   
+        padding-top: 3px;
+    }
+
+    .user-blog-panel a {
+        color:#44ddff;
+    }
+
+    .chat__current-chat-meta.chat__chat-panel .user-blog-panel::before {
+        content: "SITE INFO";
+        font-size: 20px;
+        display: block;
+        margin-bottom: 20px;
+        color: #44ddff;
+        font-family: '8bit';
+        text-shadow: 3px 3px 0 #000000;
+        box-shadow: 0 3px 0 #44ddff, 0 6px 0 #000000;
+        padding-left: 40px;
+        background-image:url('http://www.senff.com/happychat/retro/chat-site-info.png');
+        background-repeat: no-repeat;
+        background-position: left 4px;
+    }
+
+    .user-blog-panel h4.user-blog-panel__display-name {
+        text-shadow: 2px 2px 0 #000000;
+        font-size: 11px;
+        overflow-y: visible;
+        margin-top: -10px;
+    }
+
+    .user-blog-panel .user-blog-panel__display-name > span {
+        display: block;
+        padding: 0 0 5px 3px;
+    }
+
+    .user-blog-panel .chat__label {
+        border: 0;
+        padding: 2px 2px 0 2px;
+        border-radius: 0;
+        font-size: 8px;
+        text-shadow: none;
+        margin: 10px 12px 0 0;
+        display: inline-block;
+        box-shadow: 3px 0 #ffffff, 0 3px #ffffff, -3px 0 #ffffff, 0 -3px #ffffff;
+    }
+    .user-blog-panel__url {
+        text-align: right;
+    }
+
+    .user-blog-panel__url a {
+        font-size: 0;
+    }
+
+    .user-blog-panel__url a::before {
+        content:"VIEW SITE >>";    
+        font-size: 11px;
+        font-family: '8bit';
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+
+    .user-blog-panel .user-panel-items__item {
+        height: 21px;
+        line-height: 21px;
+    }
+
+    .user-blog-panel .user-panel-items__item-label[title="Current Theme"]{
+        font-size: 0;
+    }
+
+    .user-blog-panel .user-panel-items__item-label[title="Current Theme"]::before {
+        content:"Theme:";
+        font-size: 9px;
+    }
+
+    .user-blog-panel__button {
+        margin: 0 12px 12px 0;
+    }
+
+    .user-blog-panel__button:nth-of-type(1) {
+        padding-right: 0;
+    }
+
+    .user-blog-panel__button::before {
+        font-size: 9px;
+    }
+
+    .user-blog-panel__button:nth-of-type(1)::before {
+        content:"N.A.";
+    }
+
+    .user-blog-panel__button:nth-of-type(2)::before {
+        content:"BLOG RC";
+    }
+
+    .user-blog-panel__button:nth-of-type(3)::before {
+        content:"WP-ADMIN";
+    }
+
+    .user-blog-panel__button:nth-of-type(4)::before {
+        content:"CUSTOMIZE";
+    }
+
+    .user-blog-panel .collapsable-section__content {
+        margin-top: 5px;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item {
+        height: auto;
+        display: block;
+        line-height:16px;
+    }
+
+    .user-upgrades-items__item {
+        background: transparent;
+        padding: 0;
+        border: 0;
+        margin-bottom: 5px;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item {
+        min-height: unset;
+        padding: 0 0 5px 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item .user-panel-items__item-label {
+        width: 160px;
+        line-height: 16px;
+        min-height: 16px;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item .user-panel-items__item-label a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        width: 100%;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item .user-panel-items__item-content {
+        width: 100px;
+        line-height: 16px;
+        min-height: 16px;
+        height: auto;
+        text-align: right;
+        
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item .user-panel-items__item-content .user-blog-panel__upgrades-expiry {
+        font-size: 9px;
+    }
+
+    .user-blog-panel .collapsable-section .user-panel-items__item .user-panel-items__item-label .user-blog-panel__upgrades-included {
+        font-style: normal;
+        display: block;
+        padding: 0 0 0 15px;
+        line-height: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .user-blog-panel .user-upgrades-items__item .user-panel-items__item-label::after {
+        display: none;
+    }
+
+
+/* --- SITE INFO: TOS ---------------------------------------------------------------- --- */
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__label {
+        font-size: 0;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__label::after {
+        content: "TOS";
+        font-size: 10px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__preview {
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 100;
+        height: 16px;
+        float: right;
+        }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__preview > div {
+        padding-top: 3px;
+        line-height: 16px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item {
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item .user-panel-items__item-label {
+        width: 60px;
+        min-width: 40px;
+        padding-right: 0;
+        font-size: 9px;
+        min-height:16px;
+        height: 16px;
+        line-height: 16px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item:nth-of-type(2) .user-panel-items__item-label,
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item:nth-of-type(3) .user-panel-items__item-label {
+        font-size: 0;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item:nth-of-type(2) .user-panel-items__item-label:before {
+        content: "Note:";
+        font-size: 9px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item:nth-of-type(3) .user-panel-items__item-label:before {
+        content: "By:";
+        font-size: 9px;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .user-panel-items__item .user-panel-items__item-content {
+        width: 200px;
+        white-space: nowrap;
+        min-height:16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    .user-blog-panel .collapsable-section:last-child .collapsable-section__content .user-panel-items {
+        margin-bottom: 0;
+    }
+
+    .user-blog-panel__flag-label {
+        color: #ffffff;
+    }
+
+
+/* --- NOTICE AT TOP ---------------------------------------------------------------- --- */
+
+    .notices__notice {
+        padding:20px;
+        font-family: '8bit';
+    }
+
+    .notices__notice a {
+        color: #bb4400;
+    }
+
+
+/* --- BOXES AND MODALS AND BUTTONS AND ALL ---------------------------------------------------------------- --- */
+
+    .modal {
+        background: rgba(0,0,0,0.5);
+    }
+
+    .notices__notice {
+        border-radius: 0;
+        color: #ffffff;
+        background: #ff0000;
+        box-shadow: 5px 0 #000000, 0 5px #000000, -5px 0 #000000, 0 -5px #000000; 
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0 #000000;
+        }
+
+    .modal__dialog {
+        border-radius: 0;
+        color: #ffffff;
+        background: #14acdd;
+        box-shadow: 5px 0 #000000, 0 5px #000000, -5px 0 #000000, 0 -5px #000000;  
+    }
+
+    .notices__notice a,
+    .modal__dialog a {
+        color: #ffffff;
+    }
+
+    .modal__header h3 {
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+    .modal__header svg:hover {
+        fill: #000000;
+    }
+
+    .modal__dialog textarea {
+        background: #ffffff;
+        color: #000000;
+        border: solid 4px #000000;
+        border-radius: 0;
+        padding: 8px;    
+    }
+
+    .modal__dialog button,
+    .modal__dialog .button {
+        background: #ffffff;
+        color: #000000;
+        border: none;
+        border-radius: 0;
+        font-family: '8bit';
+        font-size: 10px;
+        box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
+        padding: 8px;
+        text-transform: uppercase;  
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .modal__dialog .preferences__tab-bar {
+        padding-top: 15px;
+        display: flex;
+
+    }
+
+    .modal__dialog .preferences__tab-bar > div {
+        color: #ffffff;
+        border: solid 1px #ffffff;
+        border-right: 0;
+        background: rgba(0,0,0,0.2);
+        flex-grow: 1;
+        text-align: center;
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 10px;
+        text-shadow: 2px 2px 0 #000000;
+    }
+
+    .modal__dialog .preferences__tab-bar > div:nth-of-type(3),
+    .modal__dialog .preferences__tab-bar > div:nth-of-type(4) {
+        display: none;
+    }
+
+    .modal__dialog .preferences__tab-bar > div.selected {
+        color:#000000;
+        text-shadow: none;
+         background: rgba(255,255,255,0.4);
+    }
+
+    .modal__dialog .preferences__tab-bar > div:last-child {
+        border-right: solid 1px #ffffff;
+    }
+
+    .modal__dialog .preferences__preference-item-input-box {
+        font-size: 20px;
+        width: 50px;
+    }
+
+    .modal__dialog .build-version {
+        font-family: '8bit';
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .modal__dialog .build-version::after {
+        content: "RETRO SKIN BY @SENFF";
+        display: block;
+    }
+
+
+    .container__socket__is_disconnected .chat__current-chat__actions {
+        background: transparent;
+    }
+
+    .modal__dialog button.is-primary:disabled, 
+    .modal__dialog .button.is-primary:disabled,
+    .container__socket__is_disconnected .chat__current-chat__actions textarea {
+        opacity: 1;
+        color: #999999;
+        text-shadow: 2px 2px 0 #ffffff;
+    }
+
+    .container__socket-status__disconnected .chat,
+    .container__socket__is_disconnected .chat {
+        background-image: url('http://www.senff.com/happychat/retro/chat-background.jpg');
+        background-size: cover;
+        background-position: center bottom;        
+        opacity: 0.5;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+
+
+/* --- WHO NEEDS THIS NONSENSE! ---------------------------------------------------------------- --- */
+
+    .chatting_about,
+    .chat-panel__return-to-now,
+    .report-bugs,
+    .user-log-panel,
+    .chat__chat-panel-divider {
+        display: none;
+    }
+
+
+
+/* --- COMPATIBILITY FOR HAPPYCHAT OPERATORS SCRIPT ---------------------------------------------------------------- --- */
+
+
+.capacity a,
+.operator_info,
+#operatorData,
+.operators_stats {
+    display: none !important;
+}
