@@ -1611,12 +1611,6 @@
         padding-bottom: 20px;
     }
 
-    .modal__dialog .build-version::after {
-        content: "RETRO SKIN BY @SENFF";
-        display: block;
-    }
-
-
     .container__socket__is_disconnected .chat__current-chat__actions {
         background: transparent;
     }
