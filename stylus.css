@@ -347,10 +347,10 @@
     .capacity .capacity__operators .operators {
         margin: 0 16px 0 0;
         width: 20px;
-        height: 20px;
+        height: 45px;
         padding: 0;
         border: 0;
-        background: #ffffff;
+        background: transparent;
         display: inline-block;
         clear: none;
         overflow: visible;
@@ -1610,6 +1610,12 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
+    .modal__dialog .build-version::after {
+        content: "RETRO SKIN BY @SENFF";
+        display: block;
+    }
+
 
     .container__socket__is_disconnected .chat__current-chat__actions {
         background: transparent;
