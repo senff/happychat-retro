@@ -347,10 +347,10 @@
     .capacity .capacity__operators .operators {
         margin: 0 16px 0 0;
         width: 20px;
-        height: 45px;
+        height: 20px;
         padding: 0;
         border: 0;
-        background: transparent;
+        background: #ffffff;
         display: inline-block;
         clear: none;
         overflow: visible;
@@ -440,14 +440,14 @@
 /* --- MAIN PANEL ---------------------------------------------------------------- --- */
 
     .chat__chat-panels .chat__chat-panel {
-        padding-left: 30px;
         padding-right: 0;
         padding-top: 10px;
     }
 
     .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div {
-        width: calc(100% - 380px) !important;
-         
+        width: calc(100% - 370px) !important;
+        padding-left: 3px;
+        padding-right: 3px;
     }
 
     .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div .session{
@@ -515,7 +515,7 @@
 
     .chat__current-chat__header {
         margin: 5px 15px 0 0;
-        width: calc(100% - 435px);
+        width: calc(100% - 389px);
     }
 
     .chat-toolbar {
@@ -645,6 +645,9 @@
         color: #ffffff;
     }
 
+    .chat__current-chat__messages .session__header a::after {
+        content:" >>";
+    }
     .session__header::after {
         height: 3px;
         background: #F6D2B2;
@@ -658,7 +661,7 @@
 
     @media screen and (min-width: 1400px) {
         .chat__message {
-            max-width: 50%;
+            max-width: 70%;
         }
     }
 
@@ -670,10 +673,11 @@
         box-shadow: 3px 0 #000000, 0 3px #000000, -3px 0 #000000, 0 -3px #000000;
     }
 
+
     .chat__message.chat__message__type-typing {
         background: none;
         box-shadow: none;    
-}
+    }
 
     .chat__message.chat__message__type-typing .chat__message__text {
         box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000 !important;
@@ -691,6 +695,7 @@
         top: -3px;
         background-image: url('http://www.senff.com/happychat/retro/chat-user-icon.png');
     }
+
 
     .chat__message.chat__message__type-note, 
     .chat__message.chat__message__from-operator {
@@ -720,6 +725,34 @@
         top: auto;
         bottom: 0;
         background-image: url('http://www.senff.com/happychat/retro/chat-he-icon.png');
+    }
+
+
+    @media screen and (max-width: 1399px) {
+        .chat__message.chat__message__from-user {
+            margin-left: 36px;
+            margin-right: 55px;
+        }
+        
+        .chat__message.chat__message__from-operator {
+            margin-left: 55px;
+            margin-right: 36px;
+        }        
+        .chat__message.chat__message__from-user::before {
+            content:"";
+            left: -30px;
+            width: 24px;
+            height: 24px;
+            background-size: 100% 100%;
+        }
+        .chat__message.chat__message__from-operator::before {
+            content:"";
+            right: -30px !important;
+            width: 24px;
+            height: 24px;
+            background-size: 100% 100%;
+        }
+
     }
 
     .chat__message.chat__message__type-event .chat__message__text,
@@ -1051,6 +1084,7 @@
     .user-data-panel__admin-buttons{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .user-data-panel__notes > a,
@@ -1113,6 +1147,12 @@
         content:"PAYMENTS";
         font-size: 9px;
     }
+
+    .user-data-panel__admin-buttons > a:nth-of-type(5)::before {
+        content:"ADS";
+        font-size: 9px;
+    }
+
 
     .user-data-panel iframe {
         margin: 10px 0 10px -5px;
