@@ -9,8 +9,6 @@
  font-style:normal;
 }
 
-
-
 /* --- THAT GREAT FONT ---------------------------------------------------------------- --- */
 
     h1,h2,h3,h4,h5,h6 {
@@ -436,6 +434,58 @@
         box-shadow: 5px 0 #000000, 0 5px #000000, -5px 0 #000000, 0 -5px #000000;  
     }
 
+    #actionBarThrottleInput {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;  
+        border-radius: 0;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-family: '8bit';
+        text-transform: uppercase;
+        font-size: 12px;        
+    }
+
+    .integer-input-spinner__decrement-btn,
+    .integer-input-spinner__decrement-btn {
+        border: 0;
+        border-radius: 0;
+    }
+
+    .action-bar .integer-input-spinner__increment-btn button, 
+    .action-bar .integer-input-spinner__decrement-btn button {
+        box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;
+        border-radius: 0;
+        background: #14acdd;
+        color: #ffffff;
+            width: 30px;
+        height: 30px;
+    border: solid 3px #33ccff;
+    border-right: solid 3px #0088aa;
+    border-bottom: solid 3px #0088aa;    
+    font-family: '8bit';
+    text-transform: uppercase;
+    font-size: 12px;
+    }
+
+    .action-bar .integer-input-spinner__increment-btn button svg,
+    .action-bar .integer-input-spinner__decrement-btn button svg {
+        display: none;
+    }
+
+.action-bar .integer-input-spinner__increment-btn button::before {
+    content:"+";
+}
+
+.action-bar .integer-input-spinner__decrement-btn button::before {
+    content:"-";
+}
+
+
+
+
 
 /* --- MAIN PANEL ---------------------------------------------------------------- --- */
 
@@ -445,7 +495,7 @@
     }
 
     .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div {
-        width: calc(100% - 370px) !important;
+        /* width: calc(100% - 370px) !important; */
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -459,8 +509,7 @@
     }
 
     .chat__current-chat__actions{
-        width: calc(100% - 400px) !important;
-        height: 150px;
+        width: calc(100% - 20px) !important;
         padding: 0 10px;
         background: transparent;
         border-top: 0;
@@ -469,7 +518,6 @@
     .chat-actions__current-chat-action-compose {
         box-shadow: 4px 0 #000000, 0 4px #000000, -4px 0 #000000, 0 -4px #000000;  
         padding: 3px 4px;
-        height: 135px !important;
         background: #ffffff;
     }
 
@@ -515,7 +563,7 @@
 
     .chat__current-chat__header {
         margin: 5px 15px 0 0;
-        width: calc(100% - 389px);
+        width: calc(100% - 30px);
     }
 
     .chat-toolbar {
@@ -884,6 +932,14 @@
         color:#ffffff;
     }
 
+    .edit-message-button {
+        width: 20px;
+        height: 20px;
+        background-image:url('http://www.senff.com/happychat/retro/chat-pencil.png');
+        background-size: 20px 20px;
+        margin-right: 5px;
+    }
+
     .chat__message__star {
         width: 26px;
         height: 26px;
@@ -891,6 +947,10 @@
         background-size: 26px 26px;
         right: 3px;
         bottom: 3px;
+    }
+
+    .edit-message-button > svg {
+        opacity: 0;
     }
 
     .chat__message__star > span svg {
