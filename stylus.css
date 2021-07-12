@@ -9,6 +9,8 @@
  font-style:normal;
 }
 
+
+
 /* --- THAT GREAT FONT ---------------------------------------------------------------- --- */
 
     h1,h2,h3,h4,h5,h6 {
@@ -158,7 +160,7 @@
         top: 5px;
     }
 
-    .modal__welcome .chat__dropdown .chat__dropdown__display
+    .modal__welcome .chat__dropdown .chat__dropdown__display,
     .modal__welcome .chat__dropdown__status,
     .modal__welcome .chat__dropdown .chat__dropdown__display:hover {
         color: #000000 !important;
@@ -303,7 +305,6 @@
         padding: 0;
         margin: 0;
         background: transparent;
-        height: auto;
         border: 0;
         overflow: visible;
         width: 100%;
@@ -475,17 +476,13 @@
         display: none;
     }
 
-.action-bar .integer-input-spinner__increment-btn button::before {
-    content:"+";
-}
+    .action-bar .integer-input-spinner__increment-btn button::before {
+        content:"+";
+    }
 
-.action-bar .integer-input-spinner__decrement-btn button::before {
-    content:"-";
-}
-
-
-
-
+    .action-bar .integer-input-spinner__decrement-btn button::before {
+        content:"-";
+    }
 
 /* --- MAIN PANEL ---------------------------------------------------------------- --- */
 
@@ -495,7 +492,7 @@
     }
 
     .chat__current-chat__messages .ReactVirtualized__Grid__innerScrollContainer > div {
-        /* width: calc(100% - 370px) !important; */
+        width: calc(100% - 370px) !important;
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -509,7 +506,7 @@
     }
 
     .chat__current-chat__actions{
-        width: calc(100% - 20px) !important;
+        width: calc(100% - 400px) !important;
         padding: 0 10px;
         background: transparent;
         border-top: 0;
@@ -563,7 +560,7 @@
 
     .chat__current-chat__header {
         margin: 5px 15px 0 0;
-        width: calc(100% - 30px);
+        width: calc(100% - 389px);
     }
 
     .chat-toolbar {
@@ -947,10 +944,6 @@
         background-size: 26px 26px;
         right: 3px;
         bottom: 3px;
-    }
-
-    .edit-message-button > svg {
-        opacity: 0;
     }
 
     .chat__message__star > span svg {
